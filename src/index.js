@@ -3,6 +3,7 @@ import { render} from 'react-dom';
 import "./style.css";
 import { FormularioR} from './FormularioR'
 import { classnames } from './classnames'
+import Table from './Tabla'
 
 let nombre = "Paco";
 
@@ -16,11 +17,14 @@ class App extends Component {
       
       return (
         <div>
+        {/*
         < Formulario  />
         < FormularioR />
         < Button  text="Botón" estilo='primary'></Button>
         < Counter />
-  
+        */}
+        < Table />
+
         </div>
       );
     }
