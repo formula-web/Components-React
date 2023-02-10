@@ -1,5 +1,6 @@
 import React, {Component, useState} from "react";
 import { render} from 'react-dom';
+import { createContext } from 'react'
 import "./style.css";
 import { FormularioR} from './FormularioR'
 import { classnames } from './classnames'
@@ -20,20 +21,26 @@ class App extends Component {
         this.estado="visible"
         console.log("Visible:", this.estado)
       }
+      const ThemeContext = createContext()
 
       return (
+        <ThemeContext.Provider Tema={"oscuro"}>
         <div>
         {/*
+
         < Formulario  />
         < FormularioR />
         < Button  text="Botón" estilo='primary'></Button>
         < Counter />
+
         */}
+
         < Table />
         <button onClick={hOpenModal} >Abrir Modal</button> 
         < Modal Componente={FormularioR} estado={this.estado} />
 
         </div>
+        </ThemeContext.Provider>
       );
     }
 }
