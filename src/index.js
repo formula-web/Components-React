@@ -4,6 +4,7 @@ import "./style.css";
 import { FormularioR} from './FormularioR'
 import { classnames } from './classnames'
 import Table from './Tabla'
+import {Modal} from './Modal'
 
 let nombre = "Paco";
 
@@ -11,10 +12,15 @@ let nombre = "Paco";
 class App extends Component {
     constructor (  ) {
       super(  );
-
+      this.estado="visible"
     }
+
     render() {
-      
+      const hOpenModal=()=>{
+        this.estado="visible"
+        console.log("Visible:", this.estado)
+      }
+
       return (
         <div>
         {/*
@@ -24,6 +30,8 @@ class App extends Component {
         < Counter />
         */}
         < Table />
+        <button onClick={hOpenModal} >Abrir Modal</button> 
+        < Modal Componente={FormularioR} estado={this.estado} />
 
         </div>
       );

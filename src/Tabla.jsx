@@ -40,7 +40,9 @@ useEffect(()=>{
         {
             paginaActual.results?.map((row,idx)=>
               <tr key={idx}>
+                <td>{row.id}</td>
                 <td>{row.firstName}</td>
+                <td>{row.secondName}</td>
               </tr>
             )
         }
