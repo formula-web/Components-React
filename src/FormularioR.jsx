@@ -7,7 +7,7 @@ let [estado, setEstado] = useState({email:'email', password:'pass'})
  
   const actualizaCampo=(e, campo )=>{ 
     let campos = {...estado}
-    console.log("actualizaCampo:",e.target.value,"/",campo)
+    console.log("actualizaCampo: ",e.target.value,"/",campo)
     campos[campo]= e.target.value;
     setEstado( campos ) 
   }
