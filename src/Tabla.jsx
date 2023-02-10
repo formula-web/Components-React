@@ -10,7 +10,7 @@ export default function Table () {
 
 useEffect(()=>{
   if (!cargado) {
-    console.log("useEffect() porque paginaActual=",paginaActual)
+    console.log("useEffect() porque paginaActual= ",paginaActual)
     fetch (USERS_URL)
     .then ( (data)=>data.json() )
     .then ( (res)=>{ 
